@@ -1,310 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xyz.mauriced.scrumpoker.MainActivity"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="25dp">
+    android:orientation="vertical"
+    tools:context="xyz.mauriced.scrumpoker.MainActivity">
 
     <LinearLayout
-        android:id="@+id/button0"
-        android:layout_width="wrap_content"
+        android:id="@+id/layout_row1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button1"
-        app:layout_constraintTop_toTopOf="@+id/button1">
+        android:orientation="horizontal"
+        android:layout_above="@+id/layout_row2">
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/sleeping"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/button0"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/sleeping"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/rolling_eyes"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/smiling"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/smirk"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/uhoh"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/very_mad"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/layout_row3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintLeft_toRightOf="@+id/button0"
-        app:layout_constraintRight_toLeftOf="@+id/button2">
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout_row2">
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/rolling_eyes"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/buttonq"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="1"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/omg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="/q"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttoncoffee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/coffee"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="coffee"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonqqq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/poop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:duplicateParentState="true"
+                android:text="/qqq"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toRightOf="@+id/button1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button1">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/smiling"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="2"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/smirk"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="3"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/button3"
-        app:layout_constraintRight_toLeftOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/uhoh"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="5"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintLeft_toRightOf="@+id/button5"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/very_mad"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="8"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonqqq"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/buttonqqq">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/omg"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="/q"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonqqq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toRightOf="@+id/buttonq"
-        app:layout_constraintRight_toLeftOf="@+id/buttoncoffee"
-        app:layout_constraintTop_toBottomOf="@+id/button5">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/poop"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="/qqq"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttoncoffee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonqqq"
-        app:layout_constraintLeft_toRightOf="@+id/buttonqqq"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/buttonqqq">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:duplicateParentState="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/coffee"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/transparent"
-            android:duplicateParentState="true"
-            android:text="coffee"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
