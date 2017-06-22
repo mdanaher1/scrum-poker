@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_fragment"
     android:layout_width="match_parent"
@@ -13,14 +12,15 @@
         android:id="@+id/layout_row1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_row2"
         android:orientation="horizontal"
-        android:layout_above="@+id/layout_row2">
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/button0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -51,7 +51,7 @@
             android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -83,7 +83,7 @@
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -117,14 +117,15 @@
         android:id="@+id/layout_row2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:layout_centerInParent="true">
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -155,7 +156,7 @@
             android:id="@+id/button5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -186,7 +187,7 @@
             android:id="@+id/button8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -218,14 +219,15 @@
         android:id="@+id/layout_row3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_row2"
         android:orientation="horizontal"
-        android:layout_below="@+id/layout_row2">
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/buttonq"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -256,7 +258,7 @@
             android:id="@+id/buttoncoffee"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
@@ -287,7 +289,7 @@
             android:id="@+id/buttonqqq"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:onClick="onClick"
