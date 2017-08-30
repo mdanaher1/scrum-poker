@@ -1,10 +1,12 @@
 package xyz.mauriced.scrumpoker;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        fragmentManager = getFragmentManager();
+
         // Begin the transaction
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
         // Replace the contents of the container with the new fragment
         ft.replace(R.id.main_activity, new MainFragment());
         // or ft.add(R.id.your_placeholder, new FooFragment());
@@ -50,20 +55,41 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void performTransition() {
+
+    }
+
     public void handleShakeEvent(int count) {
         Toast.makeText(this, "SHAKE IT OFF!!!", Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View view) {
+
+        //Fragment previousFragment = fragmentManager.findFragmentById(R.id.main_activity);
+        //Fragment nextFragment = CardFragment.newInstance();
+
         switch (view.getId()) {
             case R.id.button0:
                 Toast.makeText(getApplicationContext(), "asdfsadf", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button1:
+
                 // Begin the transaction
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+                /*Fade exitFade = new Fade();
+                exitFade.setDuration(500);
+                previousFragment.setExitTransition(exitFade);
+
+                Fade enterFade = new Fade();
+                enterFade.setStartDelay(600);
+                enterFade.setDuration(500);
+                nextFragment.setEnterTransition(enterFade);*/
+
+
                 // Replace the contents of the container with the new fragment
-                ft.replace(R.id.main_activity, new CardFragment())
+                ft.setCustomAnimations(R.animator.card_flip_right_in, R.animator.card_flip_right_out, R.animator.card_flip_left_in, R.animator.card_flip_left_out)
+                        .replace(R.id.main_activity, new CardFragment())
                         .addToBackStack("main")
                         .commit();
                 break;
